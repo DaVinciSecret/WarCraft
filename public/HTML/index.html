@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background:#000;
+        }
+        li{
+            list-style: none;
+            height: 3.5em;
+            text-align: center;
+            box-sizing: border-box ;
+            /* border: 1px solid #333; */
+        }
+        a{
+            text-decoration: none;
+            color: #eee;
+        }
+        a:hover{
+            color: #ff0;
+        }
+        .may-hide:hover{
+            border-bottom: 3px solid #eee;
+        }
+        section{
+           position: relative;
+           top: 3em;
+        }
+        div.top-menu{
+            top: 0;
+            width: 100%;
+            height: 3.5em;
+            position: fixed;
+            background: linear-gradient(#333,gray);
+            border: 1px solid black;
+            box-shadow: 0 0px 7px 3px #000;
+            z-index:999;
+        }
+        .war_logo a{
+            width: 150px;
+            height: 0;
+            padding-top: 3.5em;
+            overflow: hidden;
+            display: inline-block;
+            margin-left: 10px;
+            background-image: url("../img/logo_blizzard.png");
+            background-position: 0 0;
+            background-size: 100px;
+            background-repeat: no-repeat;
+        }
+        .war_item{
+            background: #333;
+            border-bottom: 5px solid #FF0;
+        }
+        div.top-menu>ul {
+            display: inline-block;
+        }
+        div.top-menu>ul>li{
+            height: 100%;
+            line-height: 3.5em;
+            font-size: 14px;
+        }
+        div.top-menu ul li::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        ul.top-left{
+            float: left;
+        }
+        ul.top-right{
+            float: right;
+        }
+        ul.top-left>li{
+            float: left;
+        }
+        ul.top-right>li{
+            float: right;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        ul.top-left::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        ul.top-right::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .search{
+            width: 200px;
+            height: 2.25em;
+            outline: none;
+            margin-left: 1em;
+            margin-top: 0.7em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 1px 1px gray;
+            font-size: 14px;
+            text-indent: 0.5em;
+            transition: all 1s;
+        }
+        .search:focus{
+            width: 450px;
+            border: 1px solid #dd0;
+            box-shadow: 0 0 3px 2px #FF0;
+        }
+       
+        .sec{
+            width: 8.5em;
+            text-align: center;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s;
+        }
+        .sec>ul li a{
+            display: inline-block;
+            width: 100%;
+        }
+        .sec ul{
+            border: 1px solid #eee;
+            margin-top: 6px;
+        }
+        .top-left li:hover .sec{
+            height: 205px;
+        }
+       .sec ul li a:hover{
+            background: #eee;
+            color: #333;
+        }
+        /*登录面板*/
+        .login_panel{
+            background: #333;
+            padding: 5px 10px;
+            position: absolute;
+            right: 90px;
+            top: 4em;
+            color: #eee;
+            border: 1px solid #333;
+            display: none;
+            box-shadow: 0 0 5px 2px #000;
+        }
+        .top_rec{
+            position: absolute;
+            top: -21px;
+            right: 10px;
+            width: 0;
+            border:10px solid #333;
+            border-left: 10px solid transparent;
+            border-top: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+        .login_panel input{
+            width: 245px;
+            height: 30px;
+            outline: none;
+            margin-left: 4px;
+            border: 1px solid #EEE;
+            border-radius: 5px;
+            text-indent: 10px;
+            font-family:Arial;
+            font-size: 14px;
+            
+        }
+        .login_panel p{
+            position: relative;
+        }
+        .info_hide{
+            color: black;
+            position: absolute;
+            right: 10px;
+            visibility: hidden;
+        }
+        .info_show{
+            color: black;
+            position: absolute;
+            right: 10px;
+            visibility: visible;
+        }
+        .login_panel h2{
+            text-shadow: 0 0 10px #FF0;
+        }
+        .login_panel button{
+            width: 70px;
+            height: 35px;
+            color: #FFF;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            left: 0;
+            font-weight: bold;
+            background: transparent;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-left: -100px;
+            text-shadow: 0 0 3px #FF0;
+        }
+        .txt_focus{
+            box-shadow: 0 0 2px 1px #FF0;
+        }
+        .login_panel button:hover{
+            background: #eee;
+            color: #333;
+        }
+        /* .login_item:hover .login_panel{
+            display: block;
+        } */
+
+
+        /*主题文字部分*/
+        div.sub_title{
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            color: #eee;
+            text-align: center;
+        }
+        div.sub_title span{
+            font-size: 2.5em;
+            font-family:fantasy;
+            text-shadow:0 0 9px #FF0;
+            text-align: center;
+        }
+        div.sub_title button{
+            width: 100px;
+            height: 38px;
+            border-radius: 5px;
+            outline: none;
+            border:none;
+            background: transparent;
+            color: #eee; 
+            font-size: 14px;
+            font-weight: bold;
+            border:1px solid #ff0;
+            margin-top: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 10px 2px #FF0;
+            transition: all 0.5s; 
+        }
+        div.sub_title button:hover{
+           /* background: linear-gradient(#333,yellow);*/
+          /*  box-shadow: 0 0 10px 2px #eee inset;*/
+          color: #333;
+          background: #eee;
+          border: 1px solid #fff;
+           box-shadow: 0 0 10px 2px #FFF;
+        }
+
+        /*主海报*/
+        div.crouse_box{
+            position: relative;
+            width: 100%;
+            /*height:700px;*/
+            overflow: hidden;
+            border: 2px solid red;  
+           /* float: left;*/
+        }
+        .sub_image{
+            /*float: left;*/
+            width: 100%;
+            display: inline-block;
+        }
+        .sub_image img{
+            width: 100%;
+           /* float: left;*/
+           background-attachment: fixed;
+        }
+    
+
+        /*附图内容及面板*/
+        .content_mid{
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            top: 0px;
+            border: 2px solid green;
+        }
+         .content_mid_lf{
+            width: 500px;
+            height: 400px;
+            border:1px solid red;
+            text-align: center;
+            padding: 0 10px;
+            float: left;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .content_box1{
+            width: 500px;
+            height: 180px;
+            border: 1px solid pink;
+            position: relative;
+            text-align: center;
+        }
+
+        .content_box1 .content_download {
+            position: relative;    
+            text-align: center; 
+            float: right;
+
+        }
+        .content_box1 .content_download a{
+            display: inline-block;
+            width: 380px;
+            height: 160px;
+            background:linear-gradient(to right,#FF0,#aaa);
+            margin: 10px auto;
+            line-height: 160px;
+            text-align: center;
+            font-size: 35px;
+            color: #eee;
+            font-weight: bold;
+            transition: all 0.5s;
+        }
+        .content_box1 .content_download a:hover{
+            text-shadow:  0 0 20px #FF0;
+            box-shadow: 0 0 20px 5px #eee inset;
+        }
+        .content_newperson a,
+        .content_gift a
+        {   
+            color: #444;
+            font-family: "Microsoft-YaHei";
+            float: left;
+            width: 100px;
+            height: 75px;
+            font-size: 16px;
+            background: #0dd;
+            line-height: 70px;
+            margin-top: 10px;
+            transition: all 0.5s;
+        }
+        .content_newperson a:hover,
+        .content_gift a:hover{
+            color: #eee;
+            background: #0ee;
+            box-shadow: 0 0 20px 5px #eee inset;
+        }
+        .content_intent,
+        .content_method{
+            width: 40px;
+            height: 70px;
+            margin-left: 10px;
+            background: #0ff;
+            line-height: 70px;
+            margin-top: 10px;
+            float: left;
+        }
+       
+        .content_box2{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            border: 1px solid blue;
+        }
+        .content_box2 div a{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100px;
+            height: 80px;
+            margin: 10px 5px; 
+            line-height: 80px;
+            background: #eee;
+            color: #333;
+        }
+        .content_box2 div a:hover{
+            background-color: #ff0;
+        }
+        @media screen and (min-width:768px) and (max-width:991px){
+            div.top-menu ul.top-right .may-hide{
+                display: none;
+            }
+        }
+        @media screen and (max-width:767px){
+            div.top-menu ul.top-left{
+                display: none;
+            }
+            div.top-menu ul.top-right .may-hide{
+                display: none;
+            }
+            li.must-show{
+                width: 20em;
+            }
+            li.must-show .search{
+                width: 100%;
+                margin: 0 auto;
+            }
+           
+        }
+        /*附图右边展示区*/
+        .content_mid_rg{
+            float: left;
+            width: 70%;
+            height: 400px;
+            border: 1px solid #eee;
+        }
+
+        .content_mid2{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            border: 1px solid #eee;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
+
+        /*登录验证*/
+        .vali_success{
+            position: absolute;
+            right: 10px;
+            font-size: 20px;
+            color: #0f0;
+        }
+        .vali_fail{
+            position: absolute;
+            right: 10px;
+            font-size: 20px;
+            color: #a00;
+        }
+
+
+        /*底部信息版权*/
+        footer{
+            margin-top: 100px;
+        }
+        footer div.bottom-content{
+            width: 100%;
+            height: 500px;
+            border: 1px solid #eee;
+        }
+        .bottom-rg{
+            float: right;
+            width: 50%;
+            height: 100%;
+            border: 1px solid blueviolet;
+        }
+        .bottom-rg ul{
+            height: 300px;
+            border: 1px solid royalblue;
+            height: 50%;
+            margin-top: 150px;
+        }
+        .bottom-rg ul li{
+            text-align: left;
+            list-style: none;
+            color: #eee;
+            font-size: 14px;
+            height: 20px;
+            margin-top: 0;
+        }
+    </style>
+    <script src="../JS/vue.js"></script>
+    <script src="../JS/Axios.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="top-menu">
+            <ul class="top-left">
+                <li class="war_logo">
+                    <a href="#" class="war_logo">Blizzard</a>
+                    <!-- <div class="sec">
+                        <ul>
+                            <li><a href="#">item4.2</a></li>
+                            <li><a href="#">item4.2</a></li>
+                            <li><a href="#">item4.2</a></li>
+                            <li><a href="#">item4.2</a></li>
+                        </ul>
+                    </div> -->
+                </li>
+                <li class="war_item">
+                    <a href="#" style="font-weight: bold;font-family: simHei;font-size: 16px; color: #fa0">WarCraft</a>
+                    <div class="sec">
+                        <ul>
+                            <li><a href="#">万王之王</a></li>
+                            <li><a href="#">玩家回归</a></li>
+                            <li><a href="#">剧情故事</a></li>
+                            <li><a href="#">了解更多</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="top-right">
+                <li class="may-hide"><a href="#">register</a></li>
+                <li class="may-hide login_item">
+                    <a href="#">Login</a>
+                    <div id="login_panel" class="login_panel">
+                          <span class="top_rec"></span>
+                          <h2>WelCome Back</h2>
+                          <hr/>
+                          <p><span>username:</span><input type="text" name="uname" id="uname" maxlength="12" v-model="uname"><span class="info_hide">❂</span></p>
+                          <p><span>password:</span><input type="password" name="upwd" id="upwd" maxlength="12" v-model="upwd"><span class="info_hide">❂</span></p>
+                          <p><button id="login" @click="login">login</button></p>
+                    </div>
+                </li>
+                <li class="may-hide"><a href="#">search</a></li>
+                <li class="must-show"><input class="search" type="text"></li>
+            </ul>
+        </div>
+    </header>
+    <!-- content -->
+    <section>
+        <!-- 主图面板 -->
+       <div class="crouse_box">
+           <!-- 图片区 -->
+           <div class="sub_image">
+                <img src="../img/for_hole.jpg"/>
+                <!-- <img src="../img/for_legend.jpg"/> -->
+           </div>
+           <!-- 文字显示 -->
+           <div class="sub_title">
+               <span>WarCraft</span><br/>
+               <span> 万王之王 · 强势归来 !</span><br/>
+               <button>版本详情</button>
+           </div>
+       </div>
+       
+       <!-- 附图及信息面板 -->
+       <div class="content_mid">
+        <div class="content_mid_lf">
+            <div class="content_box1">
+                <div class="content_download">
+                    <a href="">DownLoad</a>
+                </div>
+                <div class="content_newperson">
+                    <a href="#">新手必备</a> 
+                   <!--  <div class="content_intent">指引</div>
+                    <div class="content_method">攻略</div> -->
+                </div>
+                <div class="content_gift">
+                <a href="#">领取中心</a></div>
+            </div>
+            <div class="content_box2">
+                <div><a href="#">1</a></div>
+                <div><a href="#">2</a></div>
+                <div><a href="#">3</a></div>
+                <div><a href="#">4</a></div>
+                <div><a href="#">5</a></div>
+                <div><a href="#">6</a></div>
+                <div><a href="#">7</a></div>
+                <div><a href="#">8</a></div>
+            </div>
+        </div>
+        <div class="content_mid_rg"></div>
+       </div>
+       <div class="content_mid2"></div>
+
+
+       <!-- 种族面板 -->
+       <!-- <div class="origin_panel">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+       </div> -->
+       <!-- 英雄面板 -->
+      
+       <!--背景音乐 -->
+       <div class="bg_music">
+            <audio src=""></audio>
+       </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="bottom-content">
+            <div class="bottom-lf"></div>
+            <div class="bottom-rg">
+                <ul>
+                    <li>暴雪互动娱乐|服务条款|隐私政策|暴雪游戏招聘|暴雪游戏客服|游戏地图|商务合作|暴雪网|网站导航</li>
+                    <li>暴雪公司版权所有</li>
+                    <li>COPYRIGHT © 1990 - 2018 BLLIZARD. ALL RIGHTS RESERVED.</li>
+                    <li>COPYRIGHT © 2012 Riot Games,Inc. ALL RIGHTS RESERVED.</li>
+                    <li>本网络游戏适合18+岁的用户使用；为了您的健康，请合理控制游戏时间。</li>
+                    <li>粤网文[2017]6138-1456号|新出网证（粤）字010号</li>
+                    <li>批准文号：新出审字[2011]10000号 |文网进字[2018] 001号 | 出版物号：Bllizard </li>
+                    <li> 978-7-89989-145-2|全国文化市场统一举报电话：110</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../JS/jquery-3.2.1.js"></script>
+<script src="../JS/index.js"></script>
+<script>
+/*轮播图*/
+
+(function(){
+    var uname = document.getElementById("uname");
+    var upwd = document.getElementById("upwd");
+    var logbtn = document.getElementById("login");
+    var form = document.forms[0];
+
+	var nameReg = /^[\w\d_]{6,10}$/;
+    var pwdReg = /^\d{6}$/;
+    uname.onfocus = upwd.onfocus = function(){
+        this.nextElementSibling.className = "info_show";
+    }
+
+    uname.addEventListener('blur',()=>{vali(uname,nameReg)})
+    upwd.addEventListener('blur',()=>{vali(upwd,pwdReg)});
+
+    function vali(elem,reg){
+        elem.className = "";
+        var info = elem.nextElementSibling;
+        console.log(info)
+        if(reg.test(elem.value)){
+            info.innerHTML = "✔";
+            info.className = "vali_success";
+            return true;
+        }else{
+            info.innerHTML = "✘";
+            info.className = "vali_fail";
+            return false;
+        }
+    }
+
+    //正则验证
+    logbtn.addEventListener('click',()=>{
+        
+        var rName = vali(uname,nameReg);
+        var rpwd = vali(upwd,pwdReg);
+        if(!rName){
+            uname.focus();
+        }else if(!rpwd){
+            upwd.focus();
+           
+        }else{
+            //f1.submit();
+            console.log("正则合法")
+        }
+    });
+
+})()
+
+</script>
+</html>

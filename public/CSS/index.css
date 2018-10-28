@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#000;
+}
+li{
+    list-style: none;
+    height: 3.5em;
+    text-align: center;
+    box-sizing: border-box ;
+    /* border: 1px solid #333; */
+}
+a{
+    text-decoration: none;
+    color: #eee;
+}
+a:hover{
+    color: #ff0;
+}
+.may-hide:hover{
+    border-bottom: 3px solid #eee;
+}
+section{
+   position: relative;
+   top: 3em;
+}
+div.top-menu{
+    top: 0;
+    width: 100%;
+    height: 3.5em;
+    position: fixed;
+    background: linear-gradient(#333,gray);
+    border: 1px solid black;
+    box-shadow: 0 0px 7px 3px #000;
+    z-index:999;
+}
+.war_logo a{
+    width: 150px;
+    height: 0;
+    padding-top: 3.5em;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 10px;
+    background-image: url("../img/logo_blizzard.png");
+    background-position: 0 0;
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+.war_item{
+    background: #333;
+    border-bottom: 5px solid #FF0;
+}
+div.top-menu>ul {
+    display: inline-block;
+}
+div.top-menu>ul>li{
+    height: 100%;
+    line-height: 3.5em;
+    font-size: 14px;
+}
+div.top-menu ul li::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+ul.top-left{
+    float: left;
+}
+ul.top-right{
+    float: right;
+}
+ul.top-left>li{
+    float: left;
+}
+ul.top-right>li{
+    float: right;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+ul.top-left::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+ul.top-right::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.search{
+    width: 200px;
+    height: 2.25em;
+    outline: none;
+    margin-left: 1em;
+    margin-top: 0.7em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 1px 1px gray;
+    font-size: 14px;
+    text-indent: 0.5em;
+    transition: all 1s;
+}
+.search:focus{
+    width: 450px;
+    border: 1px solid #dd0;
+    box-shadow: 0 0 3px 2px #FF0;
+}
+
+.sec{
+    width: 8.5em;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+.sec>ul li a{
+    display: inline-block;
+    width: 100%;
+}
+.sec ul{
+    border: 1px solid #eee;
+    margin-top: 6px;
+}
+.top-left li:hover .sec{
+    height: 205px;
+}
+.sec ul li a:hover{
+    background: #eee;
+    color: #333;
+}
+/*登录面板*/
+.login_panel{
+    background: #333;
+    padding: 5px 10px;
+    position: absolute;
+    right: 90px;
+    top: 4em;
+    color: #eee;
+    border: 1px solid #333;
+    display: none;
+}
+.top_rec{
+    position: absolute;
+    top: -21px;
+    right: 10px;
+    width: 0;
+    border:10px solid #333;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.login_panel input{
+    width: 245px;
+    height: 30px;
+    outline: none;
+    margin-left: 4px;
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    text-indent: 10px;
+    font-family:Arial;
+    font-size: 14px;
+    
+}
+.login_panel p{
+    position: relative;
+}
+.login_panel label{
+    color: black;
+    position: absolute;
+    right: 10px;
+}
+.login_panel h2{
+    text-shadow: 0 0 10px #FF0;
+}
+.login_panel button{
+    width: 70px;
+    height: 35px;
+    color: #FFF;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    left: 0;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-left: -100px;
+    text-shadow: 0 0 3px #FF0;
+}
+.login_panel button:hover{
+    background: #eee;
+    color: #333;
+}
+.login_item:hover .login_panel{
+    /*display: block;*/
+}
+.vali_success{
+    position: absolute;
+    color: #0f0;
+    right: 10px;
+    font-size: 20px;
+    
+}
+.vali_fail{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    color: #a00;
+}
+
+
+
+
+
+
+/*主题文字部分*/
+div.sub_title{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    color: #eee;
+    text-align: center;
+}
+div.sub_title span{
+    font-size: 2.5em;
+    font-family:fantasy;
+    text-shadow:0 0 9px #FF0;
+    text-align: center;
+}
+div.sub_title button{
+    width: 100px;
+    height: 38px;
+    border-radius: 5px;
+    outline: none;
+    border:none;
+    background: transparent;
+    color: #eee; 
+    font-size: 14px;
+    font-weight: bold;
+    border:1px solid #ff0;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px #FF0;
+    transition: all 0.5s; 
+}
+div.sub_title button:hover{
+   /* background: linear-gradient(#333,yellow);*/
+  /*  box-shadow: 0 0 10px 2px #eee inset;*/
+  color: #333;
+  background: #eee;
+  border: 1px solid #fff;
+   box-shadow: 0 0 10px 2px #FFF;
+}
+
+/*主图面板 海报*/
+div.crouse_box{
+    position: relative;
+    width: 100%;
+    /*height:700px;*/
+    overflow: hidden;
+    border: 2px solid red;  
+   /* float: left;*/
+}
+.sub_image{
+    /*float: left;*/
+    width: 100%;
+    display: inline-block;
+}
+.sub_image img{
+    width: 100%;
+   /* float: left;*/
+}
+
+
+/*附图内容及面板*/
+.content_mid{
+    position: relative;
+    top: 0px;
+    border: 2px solid #0f0;
+    display: flex;
+    justify-content: space-between;
+}
+ .content_mid_lf{
+    width: 500px;
+    height: 400px;
+    border:1px solid red;
+    text-align: center;
+    padding: 0 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.content_box1{
+    width: 500px;
+    height: 180px;
+    border: 1px solid pink;
+    position: relative;
+    text-align: center;
+}
+
+.content_box1 .content_download {
+    position: relative;    
+    text-align: center; 
+    float: right;
+
+}
+.content_box1 .content_download a{
+    display: inline-block;
+    width: 380px;
+    height: 160px;
+    background:linear-gradient(to right,#FF0,#aaa);
+    margin: 10px auto;
+    line-height: 160px;
+    text-align: center;
+    font-size: 35px;
+    color: #eee;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.content_box1 .content_download a:hover{
+    text-shadow:  0 0 20px #FF0;
+    box-shadow: 0 0 20px 5px #eee inset;
+}
+.content_newperson a,
+.content_gift a
+{   
+    color: #444;
+    font-family: "Microsoft-YaHei";
+    float: left;
+    width: 100px;
+    height: 75px;
+    font-size: 16px;
+    background: #0dd;
+    line-height: 70px;
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+.content_newperson a:hover,
+.content_gift a:hover{
+    color: #eee;
+    background: #0ee;
+    box-shadow: 0 0 20px 5px #eee inset;
+}
+.content_intent,
+.content_method{
+    width: 40px;
+    height: 70px;
+    margin-left: 10px;
+    background: #0ff;
+    line-height: 70px;
+    margin-top: 10px;
+    float: left;
+}
+
+.content_box2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    border: 1px solid blue;
+}
+.content_box2 div a{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100px;
+    height: 80px;
+    margin: 10px 5px; 
+    line-height: 80px;
+    background: #eee;
+    color: #333;
+}
+.content_box2 div a:hover{
+    background-color: #ff0;
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    div.top-menu ul.top-right .may-hide{
+        display: none;
+    }
+}
+@media screen and (max-width:767px){
+    div.top-menu ul.top-left{
+        display: none;
+    }
+    div.top-menu ul.top-right .may-hide{
+        display: none;
+    }
+    li.must-show{
+        width: 20em;
+    }
+    li.must-show .search{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.content_mid_gt{
+    width: 820px;
+    height: 400px;
+    border:1px solid #e00;
+    position: relative;
+}
+.content_box3{
+    width: 800px;
+    height: 375px;
+    margin-right: 10px;
+    border:1px solid #eee;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+}
+.img_crouse{
+    width: 3200px;
+    height: 100%;
+    border:1px solid #ff0;
+    background: radial-gradient(#ff0,transparent);
+}
+
+
+.img_crouse_menu{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    background: #eee;
+    bottom: 0;
+    line-height: 40px;
+    border:1px solid #eee;
+}
+.img_crouse_menu ul{
+    width: 100%;
+    height: 100%;
+    border:1px solid #333;
+}
+.img_crouse_menu ul li{
+    width: 20%;
+    height: 100%;
+    list-style: none;
+    float: left;
+    border:1px solid #333;
+}

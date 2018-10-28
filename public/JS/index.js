@@ -1,12 +1,12 @@
+
 $('.login_item').on('click','a',function(e){
     e.preventDefault();
     e.stopPropagation();
+    if($('.login_panel').css('display')=="block"){
+     $('.login_panel').css("display",'none');   
+    }else
     $('.login_panel').css("display",'block');
 })
- $('body').on('click',function(){
-     if($('.login_panel').css('display')=="block")
-     $('.login_panel').css("display",'none');
- })
 
  new Vur({
      el:'#login_panel',

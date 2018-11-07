@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">BLIZZARD</div>
+         <div class="panel_title">
+            <h2>WarCraft</h2>
+        </div>
+        <div class="register_panel">
+           
+            <div class="paenl_item">
+                <p>username:</p>
+                <input name="uname" type="text" autocomplete="off" v-model="uname" @blur="repeatCheck('uname')">
+            </div>
+            <div class="paenl_item">
+                <p>password:</p>
+                <input name="upwd1" type="text" autocomplete="off" v-model="upwd" @blur="emptyCheck('upwd')">
+            </div>
+            <div class="paenl_item">
+                <p>confirm:</p>
+                <input name="confirm" type="text" autocomplete="off" v-model="confirm" @blur="emptyCheck('confirm')">
+            </div>
+            <div class="paenl_item">
+                <p>email:</p>
+                <input name="email" type="text" autocomplete="off" @blur="emptyCheck('email')" v-model="email">
+            </div>
+            <div class="paenl_item_check">
+                <p>验证码:</p>
+                <p><canvas></canvas><input name="checkcode" type="text" autocomplete="off" v-model="checkcode"></p> 
+            </div>
+            <div class="paenl_item">
+                <label for=""><input type="checkbox" name="agree" v-model="agree" value="false"><span>同意条款</span></label>
+            </div>
+            <div class="paenl_item">
+                <input type="button" @click="doRegister" value="立即注册">
+            </div>
+        </div>
+        <!-- 风暴英雄 -->
+        <div class="storm_Hero">
+            <div class="storm_hide_circle">
+                <div class="storm_big_circle">
+                    <div class="storm_big_circle2">
+                        <div class="storm_small_circle1">
+                            <div class="storm_small_circle2">
+                                <button class="storm_btn">
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 炉石传说 -->
+        <div class="stone_legend">
+            <div class="stone_hide_circle">
+                <div class="stone_big_circle">
+                    <div class="stone_big_circle2">
+                        <div class="stone_small_circle1">
+                            <div class="stone_small_circle2">
+                                <button class="stone_btn">
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--守望先锋 -->
+        <div class="sw_hero">
+            <div class="sw_hide_circle">
+                <div class="sw_big_circle">
+                    <div class="sw_big_circle2">
+                        <div class="sw_small_circle1">
+                            <div class="sw_small_circle2">
+                                <button class="sw_btn">
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="star_craft"></div>
+    </div>
+</body>
+<script src="../JS/jquery-3.2.1.js"></script>
+<script src="../JS/vue.js"></script>
+<script src="../JS/Axios.min.js"></script>
+<script src="../JS/qs.min.js"></script>
+<script src="../JS/register.js"></script>
+</html>

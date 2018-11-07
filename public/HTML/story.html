@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/story.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="top-menu">
+            <ul class="top-left">
+                <li class="war_logo">
+                    <a href="#" class="war_logo">Blizzard</a>
+                </li>
+                <li class="war_item">
+                    <a href="#" style="font-weight: bold;font-family: simHei;font-size: 16px; color: #fa0">WarCraft</a>
+                    <div class="sec">
+                        <ul>
+                            <li><a href="#">万王之王</a></li>
+                            <li><a href="#">玩家回归</a></li>
+                            <li><a href="#">剧情故事</a></li>
+                            <li><a href="#">了解更多</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul class="top-right">
+                <li class="may-hide"><a href="#">register</a></li>
+                <li class="may-hide login_item">
+                    <a href="#">Login</a>
+                    <div class="login_panel">
+                        <span class="top_rec"></span>
+                        <h2>WelCome Back</h2>
+                        <hr/>
+                        <p><span>username:</span><input type="text" name="uname" id="uname" maxlength="12"><label for="uname">❂</label></p>
+                        <p><span>password:</span><input type="password" name="upwd" id="upwd" maxlength="12"><label for="upwd">❂</label></p>
+                        <p class="err_msg"></p>
+                        <p><button id="login">login</button></p> 
+                    </div>
+                </li>
+                <li class="may-hide"><a href="#">search</a></li>
+                <li class="must-show"><input class="search" type="text"></li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+      
+      <div class="story_container">
+          <!-- 最新剧情 -->
+          <div class="story_new">
+              <video src="../src/失落的荣耀.mp4" data-src="../src/失落的荣耀.mp4" muted="muted" autoplay="autoplay" loop="loop" ></video>
+              <div class="hide_panel">
+                <h1>"Lose Honer"</h1>
+                <p>Lorem ipsum dolor sit ametconsectetur adipisicing elit.Aspernatur, hic. Corrupti sunt natusperspiciatis, ab et incidunt sednostrum itaque, doloribus molestiaedignissimos laborum officia? Illorepudiandae atque delectusveritatis!</p>
+                <button>了解详情</button>
+                <button class="look_now">立即观看</button>
+              </div>
+          </div>
+          <div class="story_menu">
+              <ul>
+                  <li><a href="#" data-panel="history_panel">历史视频</a></li>
+                  <li><a href="#" data-panel="zhuxian_panel">主线剧情</a></li>
+                  <li><a href="#" data-panel="origin_panel">种族详情</a></li>
+                  <li><a href="#" data-panel="hero_panel">英雄故事</a></li>
+                  <li><a href="" data-panel="comment_panel">玩家讨论</a></li>
+              </ul>
+          </div>
+          <div class="story_panel">
+
+            <!-- 历史视频 --> 
+           <div class="history_panel">
+                <div class="history_item">
+                    <div class="history_msg">
+                        
+                    </div>
+                    <div class="history_img">
+                        <img src="../img/story/xiwana yu anduyin.jpg" data-src="" alt="">
+                    </div>   
+                </div>
+                <div class="history_item">
+                    <div class="history_img">
+                        <img src="../img/story/xiaohei.jpg" data-src="" alt="">
+                    </div>  
+                    <div class="history_msg">
+                        <div>
+                            <h1>Battle For Azillas</h1>
+                            <h2>魔兽世界8.0,争霸艾泽拉斯！</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="history_item">
+                    <div class="history_msg">
+                        <h1>熊猫人之谜</h1>
+                    </div>
+                    <div class="history_img">
+                        <img src="../img/story/panda.jpg" data-src="" alt="">
+                    </div>
+                </div>
+                <div class="history_item">
+                    <div class="history_img">
+                        <img src="../img/story/moshou3.jpg" data-src="" alt="">
+                    </div>  
+                    <div class="history_msg">
+                
+                    </div>
+                </div>
+           </div> 
+
+           <!-- 主线剧情 -->
+           <div class="zhuxian_panel do-hide">
+                <div class="story_list"></div>
+                <div class="story_list">
+                    <div class="story_list_lt"></div>
+                    <div class="story_list_gt"></div>
+                </div>
+                <div class="story_list"></div>
+                <div class="story_list">
+                    <div class="story_list_bk"></div>
+                    <div class="story_list_bk"></div>
+                    <div class="story_list_bk"></div>
+                    <div class="story_list_bk"></div>
+                </div>
+                <div class="story_list"></div>
+                <div class="story_list">
+                      <div class="story_list_lt"></div>
+                      <div class="story_list_gt"></div>
+                </div>
+                <div class="story_list"></div>
+           </div>  
+
+           <!-- 种族面板 -->
+           <div class="origin_panel do-hide">
+               <div class="img_panel1">
+                   <!-- <img src="../img/origin/logo1.jpg" alt=""> -->
+               </div>
+               <div class="ctn_panel">
+                  
+               </div>
+               <div class="img_panel2">
+                   <!-- <img src="../img/origin/logo3.jpg" alt=""> -->
+               </div>
+               <div class="ctn_panel">
+                 
+               </div>
+               <div class="img_panel3">
+                   <!-- <img src="../img/origin/logo5.jpg" alt=""> -->
+               </div>
+               <div class="ctn_panel">
+               
+               </div>
+           </div> 
+
+            <!--英雄故事  -->
+           <div class="hero_panel do-hide">
+               
+           </div> 
+
+            <!-- 玩家讨论 -->
+           <div class="comment_panel do-hide">
+               <div class="commnent">
+                   <ul>
+                       <li v-for="(p,i) in commentList" :key="i">
+                         <div class="comment_item">
+                           <div class="comment_lt">
+                            <img src="" alt="">    
+                           </div>
+                           <div class="comment_gt">
+                            <p>{{p.comment}}</p>
+                            <span class="username">{{p.uname}}</span>
+                            <span class="datetime">{{p.date | timeForm}}</span>
+                           </div>
+                         </div>
+                       </li>
+
+                       <!-- <li>
+                        <div class="comment_item">
+                          <div class="comment_lt">
+                            <img src="" alt="">
+                          </div>
+                          <div class="comment_gt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi exercitationem quisquam optio a?</p>
+                            <span class="username">dingding</span>
+                            <span class="datetime">2018-11-5 15:11</span>
+                          </div>
+                        </div>
+                       </li>
+
+                       <li>
+                         <div class="comment_item">
+                           <div class="comment_lt">
+                            <img src="" alt="">
+                           </div>
+                           <div class="comment_gt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, eum consectetur sapiente dolore, dolorum cumque vero tenetur voluptatum dignissimos ab autem quas nulla error adipisci fugiat iure debitis recusandae doloribus.</p>
+                            <span class="username">dingding</span>
+                            <span class="datetime">2018-11-5 15:11</span>
+                           </div>
+                         </div>
+                       </li>
+
+                       <li>
+                        <div class="comment_item">
+                          <div class="comment_lt">
+                              <img src="" alt="">
+                          </div>
+                          <div class="comment_gt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, omnis necessitatibus aspernatur saepe enim incidunt officia vel praesentium at alias,</p>
+                            <span class="username">dingding</span>
+                            <span class="datetime">2018-11-5 15:11</span>
+                          </div>
+                        </div>  
+                       </li>
+
+                       <li>
+                        <div class="comment_item">
+                            <div class="comment_lt">
+                                <img src="" alt="">
+                            </div>
+                            <div class="comment_gt">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, omnis necessitatibus aspernatur saepe enim incidunt officia vel praesentium at alias,</p>
+                              <span class="username">dingding</span>
+                              <span class="datetime">2018-11-5 15:11</span>
+                            </div>
+                          </div> 
+                       </li> -->
+                   </ul>
+               </div>
+               <div class="sendInfo">
+                 <textarea name="Info" cols="30" rows="10" v-model="postInfo"></textarea>
+                 <input type="button" value="Post" @click="inserComment">
+               </div>
+           </div> 
+
+          </div>
+          
+          <!-- 弹出播放 -->
+          <div class="story_video">
+              <div class="video_panel">
+                    <video src="../src/大灾变.mp4" controls muted="muted" autoplay="autoplay" loop="loop" >   
+                    </video>
+                    <span class="close_video">×</span>
+              </div>
+          
+          </div>
+      </div>
+    </section>
+    
+    <footer>
+        <div class="bottom-info">
+            <div class="bottom-info-lt">
+                <ul>    
+                    <li>暴雪娱乐公司版权所有</li>
+                    <li>  
+                        COPYRIGHT © 1998 - 2018 BLLIZARD. ALL RIGHTS RESERVED.
+                    </li>
+                    <li> 本网络游戏适合18+岁的用户使用；为了您的健康，请合理控制游戏时间。
+                    </li>
+                    <li>粤网文[2017]6138-1456号|新出网证（粤）字010号</li>
+                    <li>
+                        <a href=""><img src="../img/新浪 (1).png" alt=""></a>
+                        <a href=""><img src="../img/腾讯QQ.png" alt=""></a>
+                        <a href=""><img src="../img/Facebook (1).png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-info-gt">
+                <div class="bottom-info-panel">
+                    <div>
+                        <a href=""></a>
+                        <p>暴雪娱乐出品</p>
+                    </div>
+                    <div>
+                        <img src="../img/二维码 (1).png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../JS/jquery-3.2.1.js"></script>
+<script src="../JS/vue.js"></script>
+<script src="../JS/qs.min.js"></script>
+<script src="../JS/Axios.min.js"></script>
+<script src="../JS/story.js"></script>
+</html>

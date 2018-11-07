@@ -1,0 +1,538 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    width: 200px;
+    padding-top: 105px;
+    height: 0;
+    background: url(../img/blizzard-default_logo.png) center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    margin-left: -100px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 2px solid #eee;
+    transition: all 0.3s linear;
+}
+.logo:hover{
+    box-shadow: 0 5px 10px 2px #eee;
+}
+
+.container{
+    width: 1520px;
+    height: 800px;
+    background: url(../img/jianianhua.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.paenl_item_check{
+    /* border: 1px solid #ff0; */
+}
+.paenl_item_check p{
+    text-align: left;
+    font-family: Arial;
+    height: 30px;
+    margin: 5px 20px;  
+    border: 1px solid #aaa;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: #eee;
+}
+.paenl_item_check p:nth-child(1){
+    text-align: left;
+}
+.paenl_item_check canvas{
+    width: 32%;
+    height: 30px;
+    background: #eee;
+    border: 1px solid #0af;
+    vertical-align: center;
+    border-radius: 5px;
+}
+
+.paenl_item_check input{
+    width: auto;
+    height: 30px;
+    margin: 5px 0px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-indent: 10px;
+    border: 1px solid #aaa;
+    background: transparent;
+    color: #eee;
+    padding-top: -10px;
+}
+/*注册面板*/
+.register_panel{
+    width: 300px;
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 100px;
+    top: 150px;
+    transition: all 0.5s linear;
+    background: rgba(50, 50, 50, 0.5);
+    box-shadow: 0 0 10px 3px #fff;
+}
+/*标题*/
+.panel_title{
+    color: #eee;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    right: 100px;
+    line-height: 50px;
+    text-align: center;
+    top: 80px;
+    transition: all 0.5s linear;
+    font-family: 'serif';
+    box-shadow: 0 0 10px 3px #fff;
+    text-shadow: 0 0 10px #fff;
+    /*font-style: normal;*/
+    border:1px solid #eee;
+}
+.paenl_item{
+    width: 100%;
+    height: 80px;
+    color: #eee;
+    text-align: center;
+    /* border: 1px solid #ff0; */
+}
+.paenl_item p{
+    text-align: left;
+    font-family: Arial;
+    margin: 5px 20px;
+}
+.paenl_item input{
+    width: 260px;
+    height: 30px;
+    margin: 5px 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-indent: 10px;
+    border: 1px solid #aaa;
+    background: transparent;
+    color: #eee;
+    caret-color:#eee;
+}
+.paenl_item input[type="button"]{
+    margin-top: 20px;
+    height: 35px;
+    background:rgba(50, 50, 50, 0.5);
+    cursor: pointer;
+    font-family: '微软雅黑';
+    transition: all 0.5s linear;
+      font-size: 16px;
+    font-family: "微软雅黑";
+}
+.register_panel>div:nth-child(6){
+    height: 40px;
+}
+.paenl_item label{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 260px;
+    height: 40px;
+    vertical-align: bottom;
+}
+.paenl_item>label>span{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    /*margin-top: -10px;*/
+}
+.paenl_item label>input{
+    display: inline-block;
+    width: 20px;
+    margin:0;
+    margin-left: 20px;
+}
+
+
+.paenl_item input[type="text"]{
+    background-color: transparent;
+  
+    
+}
+.paenl_item input[type="button"]:hover{
+    background: #0F68D1;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 5px 2px #fff;
+
+}
+
+
+/* 风暴英雄按钮 */
+.storm_Hero{
+    width: 200px;
+    height: 200px;
+    border: 5px double #483D8B;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    box-shadow: 0px 0px 10px 10px #191970;
+}
+.storm_hide_circle{
+    width: 190px;
+    height: 190px;
+    border: 2px dotted #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    margin-left: -95px;
+    margin-top: -95px;
+    box-shadow: 0 0 10px #fff;
+    
+}
+.storm_big_circle,.storm_big_circle2{
+    width: 160px;
+    height: 160px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -80px;
+    margin-top: -80px;
+    box-sizing: border-box;
+}
+.storm_big_circle2{
+    border: 5px solid #eee;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    box-shadow: 0 0 20px 10px #208;
+    animation: bigChange 4s linear infinite;
+    /* animation-play-state: paused; */
+}
+.storm_small_circle1,.storm_small_circle2{
+    width: 130px;
+    height: 130px;
+    border: 5px double #222;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -65px;
+    margin-top: -65px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 5px #a0f; 
+}
+
+.storm_small_circle2{
+    border: 3px solid #eee;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    animation: smallChange  2s linear infinite;
+    /* animation-play-state: paused; */
+}
+.storm_btn{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    outline: none;
+    margin-left: -50px;
+    margin-top: -50px;
+    box-sizing: border-box;
+    background: radial-gradient(#FFF 60%,#ddd 20%);
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-family: serif;
+    background-size: cover;
+    animation: btnChange 1.5s linear infinite;
+    /* animation-play-state: paused; */
+}
+.storm_btn span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    margin-top: -40px;
+    border-radius: 50%;
+    background: url(../img/icon/随身风暴英雄.png) center center no-repeat;
+    background-size: cover;
+}
+.storm_btn:hover{
+    box-shadow: 0 0 10px 3px #ff0 ;
+    border: 1px solid #ff0;
+}
+
+/* 炉石传说按钮 */
+.stone_legend{
+    width: 150px;
+    height: 150px;
+    border: 10px double #B50;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    box-shadow: 0px 0px 10px 5px #E70;
+}
+.stone_hide_circle{
+    width: 130px;
+    height: 130px;
+    border: 2px dotted #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    margin-left: -65px;
+    margin-top: -65px;
+    box-shadow: 0 0 10px #A00;
+    
+}
+.stone_big_circle,.stone_big_circle2{
+    width: 100px;
+    height: 100px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    box-sizing: border-box;
+}
+.stone_big_circle2{
+    border: 10px solid #FF0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    box-shadow: 0 0 20px 10px #F5DEB3 inset;
+    animation: bigChange 4s linear infinite;
+    /* animation-play-state: paused; */
+}
+.stone_small_circle1,.stone_small_circle2{
+    width: 90px;
+    height: 90px;
+    border: 5px double #222;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -45px;
+    margin-top: -45px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 5px #A0522D; 
+}
+
+.stone_small_circle2{
+    
+    border: 5px solid #FF0;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    animation: smallChange  2s linear infinite;
+    /* animation-play-state: paused; */
+}
+.stone_btn{
+    width: 60px;
+    height: 60px;
+     border-radius: 50%; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    outline: none;
+    margin-left: -30px;
+    margin-top: -30px;
+    box-sizing: border-box;
+    background: radial-gradient(#FFF 60%,#ddd 20%);
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-family: serif;
+    border:1px solid #333;
+    background-size: cover;
+    animation: btnChange 1.5s linear infinite;
+    /* animation-play-state: paused; */
+}
+
+.stone_btn span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    background: url(../img/icon/炉石.png) center center no-repeat;
+    background-size: cover;
+}
+
+.stone_btn:hover{
+    box-shadow: 0 0 10px 3px #F5DEB3 ;
+    border: 2px dotted #c60;
+    
+}
+
+
+/*守望先锋*/
+.sw_hero{
+    width: 100px;
+    height: 100px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    left: 25%;
+    top: 60%;
+    box-shadow: 0px 0px 10px 2px #fff;
+}
+.sw_hide_circle{
+    width: 90px;
+    height: 90px;
+    border: 3px dotted #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    margin-left: -45px;
+    margin-top: -45px;
+    box-shadow: 0 0 10px #fff;
+    
+}
+.sw_big_circle,.sw_big_circle2{
+    width: 80px;
+    height: 80px;
+    border: 5px solid #5C6971;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    box-sizing: border-box;
+}
+.sw_big_circle2{
+    border: 5px solid #eee;
+    box-shadow: 0 0 10px 2px #5C6971;
+    animation: bigblink 3s linear infinite;
+    /* animation-play-state: paused; */
+}
+.sw_small_circle1,.sw_small_circle2{
+    width: 70px;
+    height: 70px;
+    border: 5px solid #5C6971;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -35px;
+    margin-top: -35px;
+    box-sizing: border-box;
+
+    box-shadow: 0 0 10px 5px #E2C13E; 
+}
+
+.sw_small_circle2{
+    border: 3px solid #333;
+    /*border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-top-color: transparent;*/
+    animation: smallblink 3s linear infinite;
+}
+.sw_btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    outline: none;
+    margin-left: -20px;
+    margin-top: -20px;
+    box-sizing: border-box;
+    /*background: radial-gradient(#FFF 60%,#ddd 20%);*/
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-family: serif;
+    
+}
+.sw_btn span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    margin-top: -15px;
+    border-radius: 50%;
+    background: url(../img/icon/守望先锋-2.png) center center no-repeat;
+    background-size: cover;
+    
+}
+.sw_btn:hover{
+   /* box-shadow: 0 0 10px 3px #333 ;
+    border: 1px solid #ff0;*/
+}
+@keyframes bigblink{
+    0%{
+       transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+@keyframes smallblink{
+    0%{
+       transform: scale(1.6);
+    }
+    50%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.6);
+    }
+}
+
+
+@keyframes bigChange{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes smallChange{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes btnChange{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}

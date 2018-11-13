@@ -8,20 +8,14 @@
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
+    <div class="container">
+        <header></header>
     <!-- header -->
-    <header>
+    <!-- <header>
         <div class="top-menu">
             <ul class="top-left">
                 <li class="war_logo">
                     <a href="#" class="war_logo">Blizzard</a>
-                    <!-- <div class="sec">
-                        <ul>
-                            <li><a href="#">item4.2</a></li>
-                            <li><a href="#">item4.2</a></li>
-                            <li><a href="#">item4.2</a></li>
-                            <li><a href="#">item4.2</a></li>
-                        </ul>
-                    </div> -->
                 </li>
                 <li class="war_item">
                     <a href="#" style="font-weight: bold;font-family: simHei;font-size: 16px; color: #fa0">WarCraft</a>
@@ -29,31 +23,31 @@
                         <ul>
                             <li><a href="#">万王之王</a></li>
                             <li><a href="#">玩家回归</a></li>
-                            <li><a href="#">剧情故事</a></li>
+                            <li><a href ="#" class="jump_story">剧情故事</a></li>
                             <li><a href="#">了解更多</a></li>
                         </ul>
                     </div>
                 </li>
             </ul>
             <ul class="top-right">
-                <li class="may-hide"><a href="#">register</a></li>
+                <li class="may-hide"><a href="#" class="jump_register">register</a></li>
                 <li class="may-hide login_item">
-                    <a href="#">Login</a>
+                    <a href="#" class="loginLi">Login<span class="loginoff"></span></a>
                     <div class="login_panel">
                         <span class="top_rec"></span>
                         <h2>WelCome Back</h2>
                         <hr/>
-                        <p><span>username:</span><input type="text" name="uname" id="uname" maxlength="12"><label for="uname">❂</label></p>
-                        <p><span>password:</span><input type="password" name="upwd" id="upwd" maxlength="12"><label for="upwd">❂</label></p>
-                        
-                        <p><button>login</button></p> 
+                        <p><span>username:</span><input type="text" name="uname" id="uname" autocomplete="off" maxlength="12"><label for="uname">❂</label></p>
+                        <p><span>password:</span><input type="password" name="upwd" id="upwd" autocomplete="off" maxlength="12"><label for="upwd">❂</label></p>
+                        <p class="err_msg"></p>
+                        <p><button id="login">login</button></p> 
                     </div>
                 </li>
                 <li class="may-hide"><a href="#">search</a></li>
                 <li class="must-show"><input class="search" type="text"></li>
             </ul>
         </div>
-    </header>
+    </header> -->
     <!-- content -->
     <section>
         <!-- 主图面板 -->
@@ -71,8 +65,10 @@
            </div>
        </div>
        
+       <!-- 中间第一层 -->
        <!-- 附图及信息面板 -->
        <div class="content_mid">
+        <!-- 中间第一层左侧,下载栏 -->
         <div class="content_mid_lf">
             <div class="content_box1">
                 <div class="content_download">
@@ -97,101 +93,217 @@
                 <div><a href="#">8</a></div>
             </div>
         </div>
-        <!-- 右边轮播图 -->
+        <!-- 中间第一层右侧,轮播图 -->
         <div class="content_mid_gt">
            <div class="content_box3">
                <div class="img_crouse">
-                   <a href=""><img src="" alt=""></a>
-                   <a href=""><img src="" alt=""></a>
-                   <a href=""><img src="" alt=""></a>
-                   <a href=""><img src="" alt=""></a>
+                   <a href=""><img src="../img/wrap1.jpg" alt="">1</a>
+                   <a href=""><img src="../img/wrap2.jpg" alt="">2</a>
+                   <a href=""><img src="../img/wrap3.jpg" alt="">3</a>
+                   <a href=""><img src="../img/wrap4.jpg" alt="">4</a>
+                   <a href=""><img src="../img/wrap1.jpg" alt="">5</a>
                </div>
                <div class="img_crouse_menu">
                    <ul>
-                       <li>万圣节狂欢</li>
-                       <li>万王之王·归来</li>
-                       <li>玩家回归奖励</li>
-                       <li>这个是什么呢</li>
-                       <li>这个呢</li>
+                       <li><a href="">万圣节狂欢</a></li>
+                       <li><a href="">万王之王·归来</a></li>
+                       <li><a href="">玩家回归奖励</a></li>
+                       <li><a href=""> 这个是什么呢</a></li>
+                       <li><a href="">这个呢</a></li>
                    </ul>
                </div>
            </div>
         </div>
-
-
        </div>
-       <!-- 种族面板 -->
-       <!-- <div class="origin_panel">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-       </div> -->
-       <!-- 英雄面板 -->
-      
+
+       <!-- 中间第二层 -->
+       <!-- 新闻栏 -->
+       <div class="content_mid2">
+           <!-- 中间第二层左边 -->
+           <div class="content_mid2_lf">
+               <div>
+                   <img src="../img/ability/雷霆一击.gif" alt="">
+                   <div class="hide_panel">
+                      <p>这里该说些啥，我实在想不出来了</p> 
+                      <a href="">查看详情</a>
+                   </div>
+               </div>
+                <div>
+                    <img src="../img/ability/蝗虫群.gif" alt="">
+                   <div class="hide_panel">
+                      <p>这里该说些啥，我实在想不出来了</p>
+                      <a href="">查看详情</a> 
+                   </div>
+               </div>
+                <div>
+                    <img src="../img/ability/神圣护甲.gif" alt="">
+                   <div class="hide_panel">
+                      <p>这里该说些啥，我实在想不出来了</p> 
+                      <a href="">查看详情</a>
+                   </div>
+               </div>
+                <div>
+                    <img src="../img/ability/天神下凡.gif" alt="">
+                   <div class="hide_panel">
+                      <p>这里该说些啥，我实在想不出来了</p> 
+                      <a href="">查看详情</a>
+                   </div>
+               </div>
+           </div>
+           <!-- 中间第二层右边 -->
+           <div class="content_mid2_gt">
+               <div class="mid2_gt_tab">
+                   <ul>
+                       <li><a>综合</a></li>
+                       <li><a>新闻资讯</a></li>
+                       <li><a>版本公告</a></li>
+                       <li><a>赛事</a></li>
+                       <li><a>反馈</a></li>
+                   </ul>
+               </div>
+               <div class="mid2_gt_content">
+                   <ul>
+                       <li><span class="edition_info">版本</span><a href="">史无前例·全新版本详情</a></li>
+                       <li><span class="new_info">新闻</span><a href="">WarCraft·万王之王全新世界地图</a></li>
+                       <li><span class="match_info">赛事</span><a href="">2018年·万王之王争霸赛全面拉开</a></li>
+                       <li><span class="new_info">新闻</span><a href=""></a></li>
+                       <li><span class="match_info">赛事</span><a href=""></a></li>
+                       <li><span class="new_info">新闻</span><a href=""></a></li>
+                       <li><span class="new_info">新闻</span><a href=""></a></li>
+                       <li><span class="match_info">赛事</span><a href=""></a></li>
+                       <li><span class="match_info">赛事</span><a href=""></a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+       
+       <!-- 中间第三层 -->
+       <div class="content_mid3">
+           <div class="mid3_lt">
+               <div class="mid3_lt_img1">
+                   <div class="mid3_lt_panel"> 
+                        <a href="">艾泽拉斯·最终的决战</a>
+                   </div>
+               </div>
+           </div>
+           <div class="mid3_gt">
+                <div class="mid3_gt_Img1">
+                    <div class="mid3_gt_title">
+                        <h1>死亡之翼的复生</h1>
+                        <h3><span>黑龙王归来</span>，新世界灾难·大地裂变再起</h3>
+                    </div>
+                </div>
+                <video src="../src/WOW4.0.mp4" data-src="../src/WOW4.0.mp4" controls muted autoplay="autoplay"></video>
+           </div>
+       </div>  
+
+
+       <!-- 中间第四层— —隐藏层 -->
+       <div class="content_mid4">
+           <div>1</div>
+           <div>2</div>
+           <div>3</div>
+           <div>4</div>
+           <div>5</div>
+           <div>6</div>
+           <div>7</div>
+       </div>
+
+
+       <!-- 中间第五层 -->
+       <div class="content_mid5">
+            <div class="mid5_panel">
+                <h3>故事背景</h3>
+                <div class="mid5_storypanel">
+                    <ul>
+                        <li>
+                            <a href="" data-src=""></a>
+                            <div class="mid5_hide">
+                                <p>新的远征!</p>
+                            </div> 
+                            <p><a href="">
+                                为了新的家园，为了向往的安宁
+                            </a></p>
+                        </li>
+                        <li>
+                            <a href="" data-src=""></a>
+                            <div class="mid5_hide">
+                                <p>迷茫之路, I still Remember</p>
+                            </div> 
+                            <p><a href="">
+                                是否还记得曾经的自己
+                            </a></p>
+                        </li>
+                        <li>
+                            <a href="" data-src=""></a>
+                            <div class="mid5_hide">
+                                <p>Battle For Azilas</p>
+                            </div> 
+                            <p><a href="">
+                                决战艾泽拉斯·双王的对决
+                            </a></p>
+                        </li>
+                        <li>
+                            <a href="" data-src=""></a>
+                            <div class="mid5_hide">
+                                <p>熊猫人之谜·战火再燃</p>
+                            </div>
+                            <p>
+                                <a href="">道法自然除心魔</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>   
+       </div>
+
+
        <!--背景音乐 -->
        <div class="bg_music">
-            <audio src=""></audio>
+            <audio src="" ></audio>
        </div>
     </section>
     <!-- footer -->
-    <footer>
-        <div class="bottom-menu"></div>
-    </footer>
+    <footer></footer>
+    <!-- <footer>
+        <div class="bottom-info">
+            <div class="bottom-info-lt">
+                <ul>    
+                    <li>暴雪娱乐公司版权所有</li>
+                    <li>  
+                        COPYRIGHT © 1998 - 2018 BLLIZARD. ALL RIGHTS RESERVED.
+                    </li>
+                    <li> 本网络游戏适合18+岁的用户使用；为了您的健康，请合理控制游戏时间。
+                    </li>
+                    <li>粤网文[2017]6138-1456号|新出网证（粤）字010号</li>
+                    <li>
+                        <a href=""><img src="../img/新浪 (1).png" alt=""></a>
+                        <a href=""><img src="../img/腾讯QQ.png" alt=""></a>
+                        <a href=""><img src="../img/Facebook (1).png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-info-gt">
+                <div class="bottom-info-panel">
+                    <div>
+                      <a href=""></a>
+                      <p>暴雪娱乐出品</p>
+                    </div>
+                    <div>
+                      <img src="../img/二维码 (1).png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+
+    </div>
 </body>
 <script src="../JS/jquery-3.2.1.js"></script>
+<script src="../JS/qs.min.js"></script>
+<script src="../JS/Axios.min.js"></script>
 <script src="../JS/index.js"></script>
-<script>
-    (function(){
-    var uname = document.getElementById("uname");
-    var upwd = document.getElementById("upwd");
-    var logbtn = document.getElementById("login");
-    var form = document.forms[0];
-    var nameReg = /^[\w\d_]{6,10}$/;
-    var pwdReg = /^\d{6}$/;
-    uname.onfocus = upwd.onfocus = function(){
-        this.nextElementSibling.className = "info_show";
-    }
-    uname.addEventListener('blur',()=>{vali(uname,nameReg)})
-    upwd.addEventListener('blur',()=>{vali(upwd,pwdReg)});
-    function vali(elem,reg){
-        elem.className = "";
-        var info = elem.nextElementSibling;
-        console.log(info)
-        if(reg.test(elem.value)){
-            info.innerHTML = "✔";
-            info.className = "vali_success";
-            return true;
-        }else{
-            info.innerHTML = "✘";
-            info.className = "vali_fail";
-            return false;
-        }
-    }
-    //正则验证
-    logbtn.addEventListener('click',()=>{
-        
-        var rName = vali(uname,nameReg);
-        var rpwd = vali(upwd,pwdReg);
-        if(!rName){
-            uname.focus();
-        }else if(!rpwd){
-            upwd.focus();
-           
-        }else{
-            //f1.submit();
-            console.log("正则合法")
-        }
-    });
-})()
-
-
-</script>
-
+<script src="../JS/header.js"></script>
+<script src="../JS/footer.js"></script>
 </html>

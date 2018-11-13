@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../CSS/bootstrap.css">
+    <style>
+        .my-nav{
+            background: #0171C5;
+            border: none;
+            box-shadow: 0 -1px 30px 1px black;
+        }
+        .my-logo{
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            margin-top: 0em;
+            /* margin-right: 0.5em; */
+            background:url(../img/wow-logo2.png) center center no-repeat;
+            background-size: cover;
+        }
+        body{
+            margin-top: 50px;
+            /* background: #0062A9; */
+        }
+        .my-menu-fcolor{
+            color: #eee !important;
+        }
+        .my-menu-bc{
+            background-color: #0082D6;
+            color: #eee;
+        }
+        ul.my-menu-bc li{
+            border-bottom: 1px solid #eee;
+        }
+        ul.my-menu-bc li a h5:hover{
+            color: #0062A9;
+        }
+        ul.my-menu-bc li a h5{
+            color: #eee;
+        }
+        ul.my-menu-bc li:nth-child(6){
+            border: none;
+        }
+        .boxshadow{
+            margin: 5px;
+            box-shadow: 3px 1px 3px 3px rgba(0, 0, 0, 0.6);
+        }
+        .my-menu{
+            width: 10em;
+            background: #0082D6 !important;
+            border-bottom: 5px solid #01AEF2;
+        }
+        .my-menu:hover{
+            background: #0082D6 !important;
+        }
+        .my-main{
+            background: #0062a9;
+            /* margin-top: -1.5em; */
+        }
+        .my-main a{
+            color: #eee;
+        }
+        .welcom{
+            color: #eee;
+        }
+        .my-main a:hover{
+            color: #00aeef;
+        }
+        .my-login{
+           background-color: #0062A9;
+        }
+        a.login-btn{
+            color: white !important;
+        }
+        /* a.login-btn:hover{
+            background-color: #0082D6 !important;
+            color: #eee !important;
+        } */
+        a.login-btn:focus{
+            background-color: #0082D6 !important;
+            color: #eee !important;
+        }
+        .my-login-box{
+            width: 30em; 
+            padding: 1.5em 0.2em;
+            margin-top: 1em;
+            margin-bottom: 2em;
+            background: white;
+        }
+        .my-login-box input{
+            margin-top: 1em;
+        }
+        .my-big{
+            position: relative;
+        }
+        .my-caption{
+            padding: 1.5em;
+            color: #eee;
+        }
+        .my-caption h2{
+            margin-top: 0;
+        }
+        @media screen and (min-width:768px){
+            .my-caption{
+                position: absolute;
+                bottom:0px;
+            }
+        }
+        .my-small-1{
+            position: relative;
+            overflow: hidden;
+        }
+        .my-small-1 .my-mask{
+            width: 100%;
+            position: absolute;
+            color: #eee;
+            background: rgba(0,0,0,0.6);
+            top: 75%;
+            padding: 1em;
+            height: 100%;
+            transition: all 0.5s;
+        }
+        .my-small-1 .my-mask:hover{
+            top: 0;
+        }
+        .my-small-1 .my-mask p span{
+            float: right;
+            padding: 6.5px 10px;
+            background: url('') center top no-repeat;
+            transform: rotateZ(90deg);
+            background: #fa0;
+        }
+        .my-foot .foot-icon ul li span.img-1{
+            padding: 0.2em 1.2em;
+            background: url("") 0 0 no-repeat;
+            background: #fa0;
+        }
+        .my-foot .foot-icon ul li span.img-2{
+            padding: 0.2em 1.2em;
+            background: url("") 0 0 no-repeat;
+            background: #fa0;
+        }
+        .my-foot .foot-icon ul li span.img-3{
+            padding: 0.2em 1.2em;
+            background: url("") 0 0 no-repeat;
+            background: #fa0;
+        }
+        .my-foot .foot-icon ul li span.img-4{
+            padding: 0.2em 1.2em;
+            background: url("") 0 0 no-repeat;
+            background: #fa0;
+        }
+        .my-foot .foot-logo p{
+            margin-top: 0.5em;
+            color: gray;
+        }
+        .my-foot .foot-logo p span{
+            padding: 1em 3em;
+            background: url(../img/wow-logo2.png) center center no-repeat;
+            background-size: cover;
+        }
+        .my-foot{
+            margin:2em 0;
+        }
+        .my-foot ul li{
+            margin-top:1em;
+        }
+        @media screen and (min-width:992px){
+            .my-small-2{
+                padding: 1.7em 1.5em;
+            }
+            .my-small-2 .media{
+                line-height: 1.7em;
+            }
+            .my-small-2 .media .media-body ul{
+                padding-left: 1em; 
+                border-left: 2px solid #18A2ED;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:991px){
+            /* .my-small-2{
+                padding: 1.8em 1.5em;
+            } */
+            .my-small-2{
+                padding: 1.8em 1.5em;
+                line-height: 1.8em;
+                margin-left: 2em;
+            }
+            .my-small-2 .media .media-body ul{
+                padding-left: 1em; 
+                border-left: 2px solid #18A2ED;
+            }
+        }
+        @media screen and (max-width:767px){
+            /* .my-small-2{
+                padding: 1.9em 1.6em;
+            } */
+            .my-small-2{
+                padding: 1.9em 1.6em;
+                line-height: 1.9em;
+                margin-left: 2em;
+            }
+            .my-small-2 .media .media-body ul{
+                padding: 1em; 
+                border-left: 2px solid #18A2ED;
+            }
+        } 
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 导航条 -->
+    <div class="navbar navbar-default navbar-fixed-top my-nav">
+        <div class="container">
+            <!-- 第一部分logo+菜单 -->
+            <div class="navbar-header">    
+                <!-- logo -->
+                <a href="#" class="navbar-brand  my-logo"></a>
+                <!-- 汉堡菜单 -->
+                <a href="#menu" class="navbar-toggle" data-toggle="collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+            </div>
+            <!-- 第二部分 导航 -->
+            <div id="menu" class="collapse navbar-collapse">
+                <!-- 左侧的菜单 -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="my-menu my-menu-fcolor">万王之王</a>
+                        <ul class="dropdown-menu my-menu-bc">
+                            <li><a href="#"><h5>暴雪娱乐</h5></a></li>
+                            <li><a href="#"><h5>旗下产品</h5></a></li>
+                            <li><a href="#"><h5>新玩家</h5></a></li>
+                            <li><a href="#"><h5>精品商城</h5></a></li>
+                            <li><a href="#"><h5>精英招募</h5></a></li>
+                            <li><a href="#"><h5>关于暴雪</h5></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 右侧的导航 -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="my-menu-fcolor" href="#">简体中文</a></li>
+                    <li class="dropdown">
+                        <a class="login-btn" href="#" data-toggle="dropdown">登录</a>
+                        <ul class="dropdown-menu my-login">
+                            <div class="my-login-box">
+                                <h4>登录</h4>
+                                <p>欢迎进入暴雪官网</p>
+                                <input type="text" placeholder="用户名" name="username" class="form-control">
+                                <input type="text" placeholder="密码" name="password" class="form-control">
+                                <p>您登录表明您同意我们的服务条款</p>
+                                <a href="#" class="btn btn-info">登录</a> 
+                            </div>
+                        </ul>
+
+                    </li>
+                </ul>
+                <!-- 右侧表单 -->
+                <form action="#" class="navbar-form navbar-right">
+                    <div class="form-group has-feedback">
+                        <label for="kw" class="sr-only">搜索关键字</label>
+                        <input id="kw" placeholder="搜索" type="text" class="form-control">
+                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    </div>
+                </form>
+                <!-- 右侧文本 -->
+                <ul class="nav navbar-nav navbar-right my-menu-fcolor">
+                    <li><a class="my-menu-fcolor" href="#">查找内容</a></li>
+                    <li><a class="my-menu-fcolor" href="#">|</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="my-main">
+        <div class="container">
+            <!-- 欢迎 -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="welcom">BLLIZARD</h2>
+                </div>
+            </div>
+            <!-- 大小小 -->
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+                    <!-- 大 -->
+                    <div class="my-big boxshadow">
+                        <img src="../img/for_legend.jpg" class="img-responsive" >
+                        <div class="my-caption">
+                            <h2>艾泽拉斯</h2>
+                            <p>为了联盟</p>
+                            <a href="#" class="btn btn-info btn-xs">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="row">
+                        <!-- 小 -->
+                        <div class="col-xs-12 col-sm-6 col-md-12">
+                            <div class="my-small-1 boxshadow">
+                                <img src="../img/ability/雷霆一击.gif" class="img-responsive">
+                                <div class="my-mask">
+                                    <h4>全新的技能特效</h4>
+                                    <h5>焕然一新的模型与贴图，华丽技能特效，为你带来机制体验</h5>
+                                    <a href="#">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 小 -->
+                        <div class="col-xs-12 col-sm-6 col-md-12">
+                            <div class="my-small-2 boxshadow">
+                                <div class="media">
+                                    <div class="media-left media-middle">
+                                        <img src="../img/Logo-联盟.png" height="120px" >
+                                    </div>
+                                    <div class="media-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">争霸艾泽拉斯 </a></li>
+                                            <li><a href="#">联盟成员</a></li>
+                                            <li><a href="#">艾泽拉斯同盟</a></li>
+                                            <li><a href="#">暴雪游戏展 </a></li>
+                                            <li><a href="#">《风暴英雄》游戏道具兑换</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 小小大 -->
+            <div class="row">
+                <!-- 大 -->
+                <div class="col-xs-12 col-md-8 col-md-push-4">
+                    <div class="my-big boxshadow">
+                        <img src="../img/for_hole.jpg" class="img-responsive">
+                        <div class="my-caption">
+                            <h1>奥格瑞玛</h1>
+                            <p>为了联盟</p>
+                            <a href="#" class="btn btn-info btn-xs">了解更多</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 小小 -->
+                <div class="col-xs-12 col-md-4 col-md-pull-8">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-12">
+                            <div class="my-small-2 boxshadow">
+                                <div class="media">
+                                    <div class="media-left media-middle">
+                                        <img src="../img/Logo-部落.png" height="120px" >
+                                    </div>
+                                    <div class="media-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">部落最新进展</a></li>
+                                            <li><a href="#">部落成员</a></li>
+                                            <li><a href="#">部落同盟种族</a></li>
+                                            <li><a href="#">暴雪游戏展 </a></li>
+                                            <li><a href="#">《风暴英雄》游戏道具兑换</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-12">
+                            <div class="my-small-1 boxshadow">
+                                <img src="../img/ability/穿刺.gif" class="img-responsive">
+                                <div class="my-mask">
+                                    <h4>全新的技能特效</h4>
+                                    <h5>焕然一新的模型与贴图，华丽技能特效，为你带来机制体验</h5>
+                                    <a href="#">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 大小小 -->
+            <div class="row">
+                <div class="col-xs-12 col-md-8">
+                    <div class="my-big boxshadow">
+                        <img src="../img/jianianhua.jpg" class="img-responsive">
+                        <div class="my-caption">
+                            <h2>暴雪嘉年华</h2>
+                            <p>所有暴雪商城，所有游戏资源，尽享体验</p>
+                            <a href="#" class="btn btn-info btn-xs">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="row">
+                        <!-- 小 -->
+                        <div class="col-xs-12 col-sm-6 col-md-12">
+                            <div class="my-small-1 boxshadow">
+                                <img src="../img/ability/风暴之锤.gif" class="img-responsive">
+                                <div class="my-mask">
+                                    <h4>魔兽世界</h4>
+                                    <h5>了解关于最新的的魔兽世界进展</h5>
+                                    <a href="#" class="text-info">了解更多</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 小 -->
+                        <div class="col-xs-12 col-sm-6 col-md-12">
+                            <div class="my-small-2 boxshadow">
+                                <div class="media">
+                                    <div class="media-left media-middle">
+                                        <img src="../img/德莱尼.png" height="100px" >
+                                    </div>
+                                    <div class="media-body">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">德莱尼的转变</a></li>
+                                            <li><a href="#">更多种族详情</a></li>
+                                            <li><a href="#">魔兽世界新进展</a></li>
+                                            <li><a href="#">历史视频专区</a></li>
+                                            <li><a href="#">暴雪发布室</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="my-foot">
+        <div class="container">
+            <div class="row">
+                <!-- 左 -->
+                <div class="col-xs-12 col-md-6">
+                    <div class="col-xs-6">
+                        <h4>关于暴雪</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">公司信息</a></li>
+                            <li><a href="#">投资者联系</a></li>
+                            <li><a href="#">联系我们</a></li>
+                            <li><a href="#">新闻发布室</a></li>
+                            <li><a href="#">暴雪产品</a></li>
+                            <li><a href="#">娱乐</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6">
+                        <h4>支持</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">支持主页</a></li>
+                            <li><a href="#">留言中心</a></li>
+                            <li><a href="#">产品规范</a></li>
+                            <li><a href="#">玩家反馈</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 右 -->
+                <div class="col-xs-12 col-md-6">
+                    <div class="col-xs-6">
+                        <h4>法律声明</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">使用条款</a></li>
+                            <li><a href="#">·商标</a></li>
+                            <li><a href="#">隐私条款</a></li>
+                            <li><a href="#">Cookie</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="foot-icon">
+                            <h4>社交</h4>
+                            <ul class="list-unstyled">
+                                <li><span class="img-1"></span><a href="#">暴雪娱乐社区</a></li>
+                                <li><span class="img-2"></span><a href="#">暴雪娱乐中国微博</a></li>
+                                <li><span class="img-3"></span><a href="#">暴雪娱乐微信平台</a></li>
+                                <li><span class="img-4"></span><a href="#">暴雪娱乐频道微博</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="foot-logo">
+                        <p><span></span>·暴雪互娱 京ICP备 14036123号-2</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.js"></script>
+</html>

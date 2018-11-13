@@ -31,21 +31,23 @@
     position: relative;
 }
 .paenl_item_check{
-    /* border: 1px solid #ff0; */
+    width: 260px;
+    height: 80px;
+    color: #eee;
+    margin:0 auto;
 }
-.paenl_item_check p{
+.paenl_item_check>p:nth-child(2){
     text-align: left;
     font-family: Arial;
-    height: 30px;
-    margin: 5px 20px;  
+    height: 30px; 
     border: 1px solid #aaa;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
     align-items: center;
     color: #eee;
+    margin-top: 10px;
 }
-.paenl_item_check p:nth-child(1){
+.paenl_item_check>p:nth-child(1){
     text-align: left;
 }
 .paenl_item_check canvas{
@@ -54,7 +56,6 @@
     background: #eee;
     border: 1px solid #0af;
     vertical-align: center;
-    border-radius: 5px;
 }
 
 .paenl_item_check input{
@@ -158,18 +159,33 @@
     margin-left: 20px;
 }
 
-
 .paenl_item input[type="text"]{
     background-color: transparent;
   
     
+}
+.panel_item_agree{
+    width: 260px;
+    height: 50px;
+    color: #eee;
+    margin:0 auto;
+}
+.panel_item_agree>p:nth-child(2){
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.panel_item_agree a{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #aaa;
+    font-family: '微软雅黑';  
 }
 .paenl_item input[type="button"]:hover{
     background: #0F68D1;
     color: #fff;
     border: none;
     box-shadow: 0 0 5px 2px #fff;
-
 }
 
 
